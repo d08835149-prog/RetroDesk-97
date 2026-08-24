@@ -50,7 +50,7 @@ Built with HTML, CSS, and JavaScript.
 ## Run Locally
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/d08835149-prog/RetroDesk-97.git
 cd RetroDesk97
 ```
 
