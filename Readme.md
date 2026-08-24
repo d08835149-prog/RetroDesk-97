@@ -2,7 +2,7 @@
 
 A retro web desktop inspired by late 1990s operating systems with a Korean theme.
 
-**Live Demo:** https://d08835149-prog.github.io/RetroDesk-97/git add README.md
+**Live Demo:** https://d08835149-prog.github.io/RetroDesk-97/
 
 Built with HTML, CSS, and JavaScript.
 
