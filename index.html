@@ -2,657 +2,830 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroDesk 97 - Korean Edition</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>AuroraOS</title>
-
-  <!-- CSS 파일 연결 -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/boot.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/window.css">
+  <link rel="stylesheet" href="css/taskbar.css">
+  <link rel="stylesheet" href="css/start-menu.css">
+  <link rel="stylesheet" href="css/apps/korea-online.css">
+  <link rel="stylesheet" href="css/apps/system-apps.css">
+  <link rel="stylesheet" href="css/apps/weather.css">
 </head>
 
 <body>
 
-  <!-- =====================================
-       Welcome Screen
-  ====================================== -->
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div class="boot-content">
+      <h1>RETRODESK 97</h1>
+      <p class="edition">Korean Edition</p>
 
-  <section id="welcomeScreen">
+      <div class="boot-line"></div>
 
-    <div class="welcome-window">
+      <p>Personal Desktop Environment</p>
+      <p id="boot-status">Starting RetroDesk...</p>
 
-      <div class="logo">
-        ✦
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
       </div>
 
-      <h1>AuroraOS</h1>
+      <p class="copyright">
+        Copyright © 1997 RetroDesk Systems Korea
+      </p>
+    </div>
+  </div>
 
-      <p
-  class="welcome-text"
-  id="bootStatus"
-  data-i18n="bootInitializing"
->
-  Initializing AuroraOS...
-</p>
 
-<div class="boot-bar">
+  <!-- DESKTOP -->
+  <div id="desktop">
 
-    <div
-        class="boot-progress"
-        id="bootProgress"
-    ></div>
+    <!-- DESKTOP ICONS -->
+    <div class="desktop-icons">
 
-</div>
+      <div class="desktop-icon" data-window="computer-window">
+        <div class="icon-image">🖥️</div>
+        <span>My Computer</span>
+      </div>
 
-<p
-    class="boot-percent"
-    id="bootPercent"
->
-    0%
-</p>
+      <div class="desktop-icon" data-window="documents-window">
+        <div class="icon-image">📁</div>
+        <span>My Documents</span>
+      </div>
 
-<button
-  class="enter-button"
-  id="enterDesktopButton"
-  type="button"
-  style="display:none;"
-  data-i18n="enterDesktop"
->
-  Enter Desktop
-</button>
+      <div class="desktop-icon" data-window="korea-online-window">
+        <div class="icon-image">📞</div>
+        <span>Korea Online</span>
+      </div>
+
+      <div class="desktop-icon" data-window="internet-window">
+        <div class="icon-image">🌐</div>
+        <span>Internet</span>
+      </div>
+
+      <div class="desktop-icon" data-window="recycle-bin-window">
+        <div class="icon-image">🗑️</div>
+        <span>Recycle Bin</span>
+      </div>
+
+      <div class="desktop-icon" data-window="weather-window">
+        <div class="icon-image">☀️</div>
+        <span>Weather</span>
+      </div>
 
     </div>
 
-  </section>
 
-
-  <!-- =====================================
-       Desktop Screen
-  ====================================== -->
-
-  <section id="desktop">
-
-    <!-- Top Bar -->
-
-    <header class="top-bar">
-
-      <button
-        class="os-button"
-        id="welcomeOpen"
-        type="button"
-      >
-        ✦ AuroraOS
-      </button>
-
-      <div
-        class="top-center"
-        data-i18n="welcomeUser"
-        >
-        Welcome, User
-        </div>
-      <p
-         id="timeElement"
-         data-i18n="loadingTime"
-        >
-        Loading time...
-        </p>
-
-    </header>
-
-
-    <!-- Desktop Icons -->
-
-    <main class="desktop-icons">
-
-
-      <button
-        class="desktop-icon"
-         id="journalOpen"
-        type="button"
->
-        <span class="icon-box">
-            📖
-        </span>
-
-        <span
-        class="icon-name"
-        data-i18n="journal"
-        >
-        Aurora Journal
-        </span>
-        </button>
-
-
-
-
-      <button
-        class="desktop-icon"
-        id="settingsOpen"
-        type="button"
-        >
-        <span class="icon-box">
-            ⚙️
-        </span>
-
-        <span
-        class="icon-name"
-        data-i18n="settings"
-        >
-        Settings
-        </span>
-        </button>
-
-      <button
-  class="desktop-icon"
-  id="weatherOpen"
-  type="button"
->
-  <span class="icon-box">
-    🌤️
-  </span>
-
-  <span
-  class="icon-name"
-  data-i18n="weather"
-    >
-  Weather
-</span>
-</button>
-    </main>
-
-
-    <!-- =====================================
-         Draggable Welcome Window
-    ====================================== -->
-
+    <!-- MY COMPUTER -->
     <div
-      class="app-window"
-      id="welcomeWindow"
+      class="window"
+      id="computer-window"
+      style="top:90px; left:160px; width:470px; height:320px;"
     >
+      <div class="window-titlebar">               
+        <div class="window-title">🖥️ My Computer</div>
 
-      <!-- 창을 움직이는 손잡이 -->
-
-      <div
-        class="window-header"
-        id="welcomeWindowHeader"
-      >
-
-       <div
-        class="window-title"
-        data-i18n="welcomeWindowTitle"
-        >
-        ✦ Aurora Welcome
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
         </div>
-
-        <button
-          class="close-button"
-          id="welcomeClose"
-          type="button"
-          aria-label="Close welcome window"
-        >
-          ×
-        </button>
-
       </div>
 
-
-      <!-- 창 내부 내용 -->
+      <div class="window-menubar">
+        <span>File</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Help</span>
+      </div>
 
       <div class="window-content">
+        <div class="computer-items">
 
-        <h2 data-i18n="helloUser">
-        Hello, User.
-        </h2>
+          <div class="computer-item">
+            <div class="computer-icon">💾</div>
+            <span>3½ Floppy (A:)</span>
+          </div>
 
-        <p data-i18n="welcomeDesktop">
-        Welcome to your AuroraOS desktop.
-        </p>
+          <div class="computer-item">
+            <div class="computer-icon">🖥️</div>
+            <span>Local Disk (C:)</span>
+          </div>
 
-        <p data-i18n="dragInstruction">
-        Drag the top bar to move this window.
-        </p>
+          <div class="computer-item">
+            <div class="computer-icon">💿</div>
+            <span>CD-ROM (D:)</span>
+          </div>
 
-        <p data-i18n="selectApplication">
-        Select an application to get started.
-        </p>
+          <div class="computer-item">
+            <div class="computer-icon">📞</div>
+            <span>Korea Network</span>
+          </div>
 
+        </div>
       </div>
-      <div class="resize-handle"></div>
+
+      <div class="window-statusbar">
+        4 object(s)
+      </div>
     </div>
 
 
-
-<!-- =====================================
-     Settings App
-====================================== -->
-
-<div
-    class="app-window settings-window"
-    id="settingsWindow"
->
-
+    <!-- MY DOCUMENTS -->
     <div
-        class="window-header"
-        id="settingsWindowHeader"
+      class="window"
+      id="documents-window"
+      style="top:150px; left:360px; width:440px; height:300px;"
     >
+      <div class="window-titlebar">
+        <div class="window-title">📁 My Documents</div>
 
-<div
-  class="window-title"
-  data-i18n="settingsTitle"
->
-  ⚙️ Settings
-</div>
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
 
-        <button
-            class="close-button"
-            id="settingsClose"
-            type="button"
+      <div class="window-menubar">
+        <span>File</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Help</span>
+      </div>
+
+      <div class="window-content">
+        <div class="document-list">
+          <div class="document-item">📄 Welcome.txt</div>
+          <div class="document-item">📄 KoreaTrip.txt</div>
+          <div class="document-item">📁 Pictures</div>
+          <div class="document-item">📁 Downloads</div>
+        </div>
+      </div>
+
+      <div class="window-statusbar">
+        4 object(s)
+      </div>
+    </div>
+
+
+    <!-- KOREA ONLINE -->
+    <div
+      class="window"
+      id="korea-online-window"
+      style="top:120px; left:280px; width:460px; height:340px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">📞 Korea Online</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-menubar">
+        <span>Connection</span>
+        <span>Services</span>
+        <span>Help</span>
+      </div>
+
+      <div class="window-content korea-online-content">
+
+        <!-- LOGIN -->
+        <div id="korea-login-screen">
+          <h2>KOREA ONLINE</h2>
+          <p class="korea-subtitle">Dial-Up Network Service</p>
+
+          <div class="dialup-box">
+            <p><strong>Phone Number:</strong> 01410</p>
+            <p><strong>Modem:</strong> RetroNet 33.6K</p>
+            <p><strong>Location:</strong> Seoul, Korea</p>
+          </div>
+
+          <button id="connect-button">Connect</button>
+          <p id="connection-status">Not connected.</p>
+        </div>
+
+        <!-- CONNECTED -->
+        <div id="korea-main-screen" hidden>
+          <h2>KOREA ONLINE</h2>
+          <p>Welcome to the Korea Online Network</p>
+
+          <div class="online-menu">
+            <button>📰 News</button>
+            <button>📋 Bulletin Board</button>
+            <button>💬 Chat Room</button>
+            <button>💾 Downloads</button>
+            <button>🎵 Music</button>
+            <button>🎮 Games</button>
+            <button>✉ Mail</button>
+          </div>
+
+          <div class="connection-info">
+            Connected at 33.6 Kbps
+          </div>
+        </div>
+
+      </div>
+
+      <div class="window-statusbar">
+        Korea Online Network
+      </div>
+    </div>
+
+
+    <!-- RECYCLE BIN -->
+    <div
+      class="window"
+      id="recycle-bin-window"
+      style="top:160px; left:500px; width:430px; height:300px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">🗑️ Recycle Bin</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-menubar">
+        <span>File</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Help</span>
+      </div>
+
+      <div class="window-content recycle-bin-content">
+
+        <div id="recycle-files">
+          <div class="recycle-file">📄 old_note.txt</div>
+          <div class="recycle-file">🖼️ old_photo.bmp</div>
+          <div class="recycle-file">📄 modem_log.txt</div>
+        </div>
+
+        <div class="recycle-actions">
+          <button id="empty-bin-button">
+            Empty Recycle Bin
+          </button>
+        </div>
+
+        <p id="recycle-status">
+          3 deleted item(s)
+        </p>
+
+      </div>
+
+      <div class="window-statusbar">
+        Recycle Bin
+      </div>
+    </div>
+
+
+    <!-- WEATHER -->
+    <div
+      class="window"
+      id="weather-window"
+      style="top:130px; left:450px; width:400px; height:350px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">☀️ Korea Weather</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-menubar">
+        <span>File</span>
+        <span>View</span>
+        <span>Help</span>
+      </div>
+
+      <div class="window-content weather-content">
+
+        <div class="weather-location">
+          <label for="weather-city">City:</label>
+
+          <select id="weather-city">
+            <option value="seoul">Seoul</option>
+            <option value="busan">Busan</option>
+            <option value="incheon">Incheon</option>
+            <option value="daegu">Daegu</option>
+            <option value="jeju">Jeju</option>
+          </select>
+        </div>
+
+        <div id="weather-loading">
+          Connecting to Korea Weather Service...
+        </div>
+
+        <div id="weather-display" hidden>
+
+          <div
+            id="weather-icon"
+            class="weather-main-icon"
+          >
+            ☀️
+          </div>
+
+          <div id="weather-city-name">
+            Seoul
+          </div>
+
+          <div id="weather-temperature">
+            --°C
+          </div>
+
+          <div id="weather-description">
+            Loading...
+          </div>
+
+          <div class="weather-details">
+
+            <div>
+              Humidity:
+              <strong id="weather-humidity">
+                --%
+              </strong>
+            </div>
+
+            <div>
+              Wind:
+              <strong id="weather-wind">
+                -- km/h
+              </strong>
+            </div>
+
+          </div>
+
+          <button id="weather-refresh">
+            Refresh
+          </button>
+
+        </div>
+
+        <div id="weather-error" hidden>
+          Unable to receive weather data.
+        </div>
+
+      </div>
+
+      <div class="window-statusbar">
+        Live weather data
+      </div>
+    </div>
+
+
+    <!-- SETTINGS -->
+    <div
+      class="window"
+      id="settings-window"
+      style="top:140px; left:420px; width:420px; height:300px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">⚙️ Settings</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-menubar">
+        <span>File</span>
+        <span>View</span>
+        <span>Help</span>
+      </div>
+
+      <div class="window-content settings-content">
+        <div class="settings-item">🖼️ Display</div>
+        <div class="settings-item">🔊 Sounds</div>
+        <div class="settings-item">🖱️ Mouse</div>
+        <div class="settings-item">🌐 Network</div>
+      </div>
+
+      <div class="window-statusbar">
+        System Settings
+      </div>
+    </div>
+
+
+    <!-- FIND -->
+    <div
+      class="window"
+      id="find-window"
+      style="top:170px; left:470px; width:400px; height:230px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">🔍 Find</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-content simple-app-content">
+        <label for="find-input">
+          Find files or folders:
+        </label>
+
+        <input
+          id="find-input"
+          type="text"
+          placeholder="Type a file name..."
         >
-            ×
+
+        <button id="find-button">
+          Find Now
         </button>
 
+        <p id="find-result"></p>
+      </div>
     </div>
 
-    <div class="settings-content">
 
-<h2 data-i18n="wallpaper">
-  Wallpaper
-</h2>
-
-        <button
-  class="wallpaper-button"
-  data-wallpaper="blue"
-  data-i18n="auroraBlue"
->
-  🌌 Aurora Blue
-</button>
-
-<button
-  class="wallpaper-button"
-  data-wallpaper="purple"
-  data-i18n="auroraPurple"
->
-  💜 Aurora Purple
-</button>
-
-<button
-  class="wallpaper-button"
-  data-wallpaper="midnight"
-  data-i18n="midnight"
->
-  🌙 Midnight
-</button>
-
-<button
-  class="wallpaper-button"
-  data-wallpaper="sunset"
-  data-i18n="sunset"
->
-  🌅 Sunset
-</button>
-
-<h2 data-i18n="language">
-  Language
-</h2>
-
-        <div class="language-buttons">
-
-  <button
-    class="language-button active-language"
-    data-language="en"
-    type="button"
-  >
-    US English
-  </button>
-
-  <button
-    class="language-button"
-    data-language="ko"
-    type="button"
-  >
-    🇰🇷 한국어
-  </button>
-
-  <button
-    class="language-button"
-    data-language="es"
-    type="button"
-  >
-    🇪🇸 Español
-  </button>
-
-  <button
-    class="language-button"
-    data-language="hi"
-    type="button"
-  >
-    🇮🇳 हिन्दी
-  </button>
-
-</div>
-
-<div class="feedback-section">
-
-  <h2 data-i18n="translationFeedback">
-    Translation Feedback
-  </h2>
-
-  <p
-    class="feedback-description"
-    data-i18n="translationFeedbackDescription"
-  >
-    Found an incorrect or unnatural translation? Please let me know.
-    -d08835149@gmail.com-
-  </p>
-
-  <a
-    class="feedback-button"
-    id="translationFeedbackButton"
-    href="mailto:YOUR_EMAIL@example.com?subject=AuroraOS%20Translation%20Feedback"
-    data-i18n="reportTranslation"
-  >
-    ✉️ Report a translation issue
-  </a>
-
-</div>
-
-    </div>
-    <div class="resize-handle"></div>
-</div>
-
-    <!-- =====================================
-     Aurora Journal App
-====================================== -->
-
-<div
-  class="app-window journal-window"
-  id="journalWindow"
->
-
-  <div
-    class="window-header"
-    id="journalWindowHeader"
-  >
-
+    <!-- HELP -->
     <div
-    class="window-title"
-    data-i18n="journalTitle"
+      class="window"
+      id="help-window"
+      style="top:120px; left:360px; width:450px; height:300px;"
     >
-    📖 Aurora Journal
+      <div class="window-titlebar">
+        <div class="window-title">❓ RetroDesk Help</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-content help-content">
+        <h3>Welcome to RetroDesk 97</h3>
+
+        <p>
+          Double-click desktop icons to open programs.
+        </p>
+
+        <p>
+          Drag windows using the blue title bar.
+        </p>
+
+        <p>
+          Use the Start menu to access programs and system tools.
+        </p>
+      </div>
     </div>
 
-    <button
-      class="close-button"
-      id="journalClose"
-      type="button"
-      aria-label="Close Aurora Journal"
+
+    <!-- RUN -->
+    <div
+      class="window"
+      id="run-window"
+      style="top:230px; left:430px; width:380px; height:180px;"
     >
-      ×
-    </button>
+      <div class="window-titlebar">
+        <div class="window-title">▶ Run</div>
 
-  </div>
-  
-  <div class="journal-content">
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
 
-    <aside class="journal-sidebar">
+      <div class="window-content run-content">
+        <p>Type the name of a program:</p>
 
-      <button
-        class="journal-entry active-entry"
-        data-entry="welcome"
-        type="button"
+        <input
+          id="run-input"
+          type="text"
+          placeholder="notepad"
         >
-        <strong data-i18n="welcome">
-        Welcome
-        </strong>
-        <span data-i18n="july2026">
-        July 2026
-        </span>
+
+        <div class="run-buttons">
+          <button id="run-ok-button">OK</button>
+          <button id="run-cancel-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- NOTEPAD -->
+    <div
+      class="window"
+      id="notepad-window"
+      style="top:120px; left:300px; width:480px; height:330px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">📝 Notepad</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-menubar">
+        <span>File</span>
+        <span>Edit</span>
+        <span>Help</span>
+      </div>
+
+      <textarea
+        class="notepad-area"
+        placeholder="Type something..."
+      ></textarea>
+    </div>
+
+
+    <!-- CALCULATOR -->
+    <div
+      class="window"
+      id="calculator-window"
+      style="top:180px; left:400px; width:280px; height:320px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">🧮 Calculator</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-content calculator-content">
+
+        <input
+          id="calculator-display"
+          type="text"
+          value="0"
+          readonly
+        >
+
+        <div class="calculator-grid">
+          <button data-calc="7">7</button>
+          <button data-calc="8">8</button>
+          <button data-calc="9">9</button>
+          <button data-calc="/">÷</button>
+
+          <button data-calc="4">4</button>
+          <button data-calc="5">5</button>
+          <button data-calc="6">6</button>
+          <button data-calc="*">×</button>
+
+          <button data-calc="1">1</button>
+          <button data-calc="2">2</button>
+          <button data-calc="3">3</button>
+          <button data-calc="-">−</button>
+
+          <button data-calc="0">0</button>
+          <button data-calc=".">.</button>
+          <button data-calc="=">=</button>
+          <button data-calc="+">+</button>
+
+          <button
+            id="calculator-clear"
+            class="calculator-clear"
+          >
+            C
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- INTERNET -->
+    <div
+      class="window"
+      id="internet-window"
+      style="top:80px; left:230px; width:600px; height:420px;"
+    >
+      <div class="window-titlebar">
+        <div class="window-title">🌐 RetroWeb</div>
+
+        <div class="window-controls">
+          <button class="minimize-button">_</button>
+          <button class="maximize-button">□</button>
+          <button class="close-button">×</button>
+        </div>
+      </div>
+
+      <div class="window-menubar">
+        <span>File</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Favorites</span>
+        <span>Help</span>
+      </div>
+
+      <div class="browser-toolbar">
+        <span>Address:</span>
+
+        <input
+          value="http://www.korea-online.kr"
+          readonly
+        >
+      </div>
+
+      <div class="window-content browser-content">
+        <h2>Welcome to RetroWeb</h2>
+
+        <p>Korea Online Network Portal</p>
+
+        <hr>
+
+        <p>📰 News</p>
+        <p>🎵 Music</p>
+        <p>🎮 Games</p>
+        <p>✈ Travel Korea</p>
+      </div>
+    </div>
+
+
+    <!-- START MENU -->
+    <div id="start-menu">
+
+      <div class="start-menu-side">
+        RETRODESK 97
+      </div>
+
+      <div class="start-menu-items">
+
+        <div
+          class="start-item has-submenu"
+          id="programs-menu-item"
+        >
+          <span>📂</span>
+          <span>Programs</span>
+          <span class="arrow">▶</span>
+
+          <div
+            class="submenu"
+            id="programs-submenu"
+          >
+            <div
+              class="submenu-item"
+              data-window="korea-online-window"
+            >
+              📞 Korea Online
+            </div>
+
+            <div
+              class="submenu-item"
+              data-window="internet-window"
+            >
+              🌐 Internet
+            </div>
+
+            <div
+              class="submenu-item"
+              data-window="weather-window"
+            >
+              ☀️ Weather
+            </div>
+
+            <div
+              class="submenu-item"
+              data-window="notepad-window"
+            >
+              📝 Notepad
+            </div>
+
+            <div
+              class="submenu-item"
+              data-window="calculator-window"
+            >
+              🧮 Calculator
+            </div>
+          </div>
+        </div>
+
+
+        <div
+          class="start-item"
+          data-window="documents-window"
+        >
+          <span>📄</span>
+          <span>Documents</span>
+          <span></span>
+        </div>
+
+
+        <div
+          class="start-item"
+          data-window="settings-window"
+        >
+          <span>⚙️</span>
+          <span>Settings</span>
+          <span></span>
+        </div>
+
+
+        <div
+          class="start-item"
+          data-window="find-window"
+        >
+          <span>🔍</span>
+          <span>Find</span>
+          <span></span>
+        </div>
+
+
+        <div
+          class="start-item"
+          data-window="help-window"
+        >
+          <span>❓</span>
+          <span>Help</span>
+          <span></span>
+        </div>
+
+
+        <div
+          class="start-item"
+          data-window="run-window"
+        >
+          <span>▶️</span>
+          <span>Run...</span>
+          <span></span>
+        </div>
+
+
+        <div class="start-divider"></div>
+
+
+        <div
+          class="start-item"
+          id="shutdown-menu-item"
+        >
+          <span>⏻</span>
+          <span>Shut Down...</span>
+          <span></span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- TASKBAR -->
+    <div id="taskbar">
+
+      <button id="start-button">
+        <span class="start-logo">▣</span>
+        Start
       </button>
 
-      <button
-        class="journal-entry"
-        data-entry="goals"
-        type="button"
-        >
-        <strong data-i18n="myGoals">
-        My Goals
-        </strong>
-        <span data-i18n="july2026">
-        July 2026
-        </span>
+      <div id="taskbar-apps"></div>
+
+      <div class="taskbar-space"></div>
+
+      <div id="clock">
+        12:00 PM
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SHUTDOWN SCREEN -->
+  <div id="shutdown-screen">
+    <div class="shutdown-message">
+
+      <h1>RetroDesk 97</h1>
+
+      <p>
+        It's now safe to turn off your computer.
+      </p>
+
+      <button id="restart-button">
+        Restart
       </button>
 
-      <button
-        class="journal-entry"
-        data-entry="favorites"
-        type="button"
-        >
-        <strong data-i18n="favoriteThings">
-        Favorite Things
-        </strong>
-        <span data-i18n="july2026">
-        July 2026
-        </span>
-      </button>
-
-    </aside>
-
-<article class="journal-page">
-
-  <p
-  class="journal-date"
-  id="journalDate"
-  data-i18n="july2026"
->
-  July 2026
-</p>
-
-<h2
-  id="journalTitle"
-  data-i18n="journalWelcomeTitle"
->
-  Welcome, User.
-</h2>
-
-  <div id="journalBody">
-
-  <p data-i18n="journalIntro">
-    This is Aurora Journal, a quiet space for your thoughts,
-    ideas, and memories.
-  </p>
-
-  <blockquote data-i18n="journalQuote">
-    Small ideas can become bright possibilities.
-  </blockquote>
-
-  <p data-i18n="journalInstruction">
-    Select an entry from the left side to read more.
-  </p>
-
-</div>
-
-</article>
-
-  </div>
-  <div class="resize-handle"></div>
-</div>
-
-<!-- =====================================
-     Weather App
-====================================== -->
-
-<!-- =====================================
-     Weather App
-====================================== -->
-
-<div
-  class="app-window weather-window"
-  id="weatherWindow"
->
-
-  <div
-    class="window-header"
-    id="weatherWindowHeader"
-  >
-    <div
-    class="window-title"
-    data-i18n="weatherTitle"
-    >
-    🌤️ Weather
     </div>
-
-    <button
-      class="close-button"
-      id="weatherClose"
-      type="button"
-      aria-label="Close Weather"
-    >
-      ×
-    </button>
   </div>
 
-  <div class="weather-content">
 
-    <p
-    class="weather-label"
-    data-i18n="currentLocation"
-    >
-    Current location
-    </p>
-
-    <h2
-    id="weatherLocation"
-    data-i18n="findingLocation"
-    >
-    Finding your location...
-    </h2>
-
-    <p
-    id="weatherDate"
-    class="weather-date"
-    data-i18n="loadingDate"
-    >
-    Loading date...
-    </p>
-
-    <div
-      class="weather-icon"
-      id="weatherIcon"
-    >
-      🌤️
-    </div>
-
-    <p
-      class="weather-temperature"
-      id="weatherTemperature"
-    >
-      --°
-    </p>
-
-    <p
-    class="weather-description"
-    id="weatherDescription"
-    data-i18n="loadingWeather"
-    >
-    Loading current weather...
-    </p>
-
-    <!-- Current weather details -->
-
-    <div class="weather-details">
-
-      <div class="weather-detail">
-<span data-i18n="feelsLike">
-  Feels like
-</span>
-        <strong id="weatherFeelsLike">--°</strong>
-      </div>
-
-      <div class="weather-detail">
-<span data-i18n="humidity">
-  Humidity
-</span>
-        <strong id="weatherHumidity">--%</strong>
-      </div>
-
-      <div class="weather-detail">
-<span data-i18n="wind">
-  Wind
-</span>
-        <strong id="weatherWind">-- km/h</strong>
-      </div>
-
-    </div>
-
-    <!-- Sunrise and Sunset -->
-
-    <div class="sun-details">
-
-      <div class="sun-detail">
-        <span data-i18n="sunrise">
-  🌅 Sunrise
-</span>
-        <strong id="weatherSunrise">--:--</strong>
-      </div>
-
-      <div class="sun-detail">
-        <span data-i18n="sunsetTime">
-  🌇 Sunset
-</span>
-        <strong id="weatherSunset">--:--</strong>
-      </div>
-
-    </div>
-
-    <!-- Five-hour forecast -->
-
-    <div class="hourly-section">
-
-      <h3 data-i18n="nextFiveHours">
-  Next 5 Hours
-</h3>
-
-      <div
-  class="hourly-forecast"
-  id="hourlyForecast"
-  data-i18n="loadingForecast"
->
-  Loading forecast...
-</div>
-
-    </div>
-
-    <p
-      class="weather-updated"
-      id="weatherUpdated"
-    ></p>
-
-<button
-  class="weather-refresh"
-  id="weatherRefresh"
-  type="button"
-  data-i18n="refreshWeather"
->
-  Refresh weather
-</button>
-
-  </div>
-
-  <!-- 반드시 Weather 창 맨 마지막에 위치 -->
-
-  <div class="resize-handle"></div>
-
-</div>
-
-  </section>
-
-
-  <!-- JavaScript 파일 연결 -->
-
-  <script src="script.js"></script>
+  <script
+    type="module"
+    src="js/main.js"
+  ></script>
 
 </body>
 </html>

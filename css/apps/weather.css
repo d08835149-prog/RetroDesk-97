@@ -1,0 +1,104 @@
+/* ========================================
+   WEATHER
+======================================== */
+
+.weather-content {
+  padding: 15px;
+
+  text-align: center;
+
+  background: #e8e8e8;
+}
+
+.weather-location {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+.weather-location select {
+  min-width: 130px;
+
+  padding: 3px;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  background: white;
+}
+
+#weather-loading,
+#weather-error {
+  margin-top: 50px;
+
+  font-size: 12px;
+}
+
+.weather-main-icon {
+  margin-top: 5px;
+
+  font-size: 48px;
+}
+
+#weather-city-name {
+  margin-top: 5px;
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#weather-temperature {
+  margin-top: 5px;
+
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#weather-description {
+  margin-top: 4px;
+
+  font-size: 13px;
+}
+
+.weather-details {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 18px;
+
+  font-size: 12px;
+}
+
+#weather-refresh {
+  margin-top: 18px;
+
+  padding: 5px 18px;
+
+  background: #c0c0c0;
+
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+#weather-refresh:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}

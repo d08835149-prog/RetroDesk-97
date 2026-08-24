@@ -1,0 +1,121 @@
+.korea-online-content {
+  padding: 20px;
+
+  background: #efefef;
+
+  text-align: center;
+}
+
+.korea-online-content h2 {
+  margin:
+    5px
+    0
+    3px;
+
+  color: #000080;
+
+  font-size: 25px;
+
+  letter-spacing: 1px;
+}
+
+.korea-subtitle {
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  font-size: 12px;
+}
+
+.dialup-box {
+  width: 280px;
+
+  margin:
+    0
+    auto
+    18px;
+
+  padding: 12px;
+
+  background: white;
+
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+
+  text-align: left;
+
+  font-size: 12px;
+}
+
+.dialup-box p {
+  margin: 8px 0;
+}
+
+#connect-button {
+  min-width: 100px;
+
+  padding: 7px 18px;
+
+  background: #c0c0c0;
+
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#connection-status {
+  min-height: 20px;
+
+  margin-top: 15px;
+
+  font-size: 12px;
+}
+
+.online-menu {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 8px;
+}
+
+.online-menu button {
+  padding: 10px;
+
+  background: #c0c0c0;
+
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.connection-info {
+  margin-top: 15px;
+
+  padding: 5px;
+
+  background: black;
+  color: #00ff00;
+
+  font-family: monospace;
+
+  font-size: 12px;
+}

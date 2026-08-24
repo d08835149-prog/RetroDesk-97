@@ -1,0 +1,99 @@
+#desktop {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background-image:
+    url("../assets/wallpapers/seoul1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.desktop-icons {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.desktop-icon {
+  width: 90px;
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  cursor: default;
+
+  user-select: none;
+}
+
+.icon-image {
+  margin-bottom: 4px;
+
+  font-size: 32px;
+}
+
+.desktop-icon span {
+  padding: 2px 3px;
+
+  text-shadow:
+    1px 1px black;
+}
+
+.desktop-icon.selected span {
+  background: #000080;
+}
+
+.computer-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  padding: 20px;
+}
+
+.computer-item {
+  width: 90px;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+.computer-icon {
+  margin-bottom: 8px;
+
+  font-size: 34px;
+}
+
+.document-list {
+  padding: 12px;
+
+  font-size: 13px;
+}
+
+.document-item {
+  padding: 7px;
+}
+
+.document-item:hover {
+  background: #000080;
+  color: white;
+}

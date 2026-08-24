@@ -1,0 +1,78 @@
+#boot-screen {
+  position: fixed;
+  inset: 0;
+
+  background: #000080;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+}
+
+.boot-content {
+  width: 500px;
+
+  text-align: center;
+}
+
+.boot-content h1 {
+  margin: 0;
+
+  font-size: 48px;
+
+  letter-spacing: 2px;
+}
+
+.edition {
+  margin-top: 5px;
+
+  color: #d7d7d7;
+
+  font-size: 18px;
+}
+
+.boot-line {
+  height: 2px;
+
+  margin: 25px 0;
+
+  background: white;
+}
+
+#boot-status {
+  margin-top: 30px;
+
+  font-size: 14px;
+}
+
+.progress-bar {
+  width: 320px;
+  height: 22px;
+
+  margin: 15px auto;
+
+  padding: 2px;
+
+  border: 2px solid white;
+}
+
+#progress-fill {
+  width: 0%;
+  height: 100%;
+
+  background: white;
+
+  transition:
+    width 0.2s linear;
+}
+
+.copyright {
+  margin-top: 40px;
+
+  color: #c0c0c0;
+
+  font-size: 12px;
+}
